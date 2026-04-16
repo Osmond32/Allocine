@@ -1,14 +1,13 @@
-import { Button, Card } from "react-bootstrap"
+import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
-
+import { FaFilm } from 'react-icons/fa';
 
 const MovieCard = ({movie}) => {
     const navigate = useNavigate();
 
-
     return <>
-        <Card className="col-3" onClick={() => (navigate("/movie/"+movie.id))}>
+        <Card className="col-3 fade-in film-border-card position-relative" onClick={() => (navigate("/movie/"+movie.id))}>
+            <span className="cinema-icon"><FaFilm /></span>
             <Card.Img variant="top" src={"https://image.tmdb.org/t/p/original" + movie.poster_path} />
             <Card.Body style={{maxHeight: "250px"}}>
                 <Card.Title className="text-truncate">{movie.title}</Card.Title>
@@ -16,13 +15,10 @@ const MovieCard = ({movie}) => {
                     {movie.overview}
                 </Card.Text>
                 <div className="d-flex flex-column align-items-center">
-                <Button variant="primary" onClick={() => (navigate("/movie/"+movie.id))}>Voir plus</Button>
+                <Button variant="primary" onClick={e => {e.stopPropagation(); navigate("/movie/"+movie.id)}}>Voir plus</Button>
                 </div>
             </Card.Body>
         </Card>
-          
-
-  
     </>
 }
 
