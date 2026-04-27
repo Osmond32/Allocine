@@ -1,5 +1,5 @@
 import axios from "axios"
-import {TOKEN} from "./config";
+import {TOKEN} from "./config.js";
 
 function getPeoples(page){    // funzione get peoples
     return axios.get("https://api.themoviedb.org/3/person/popular?language=it-IT&page=" +page,{

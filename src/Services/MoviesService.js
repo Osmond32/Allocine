@@ -1,5 +1,5 @@
 import axios from "axios"// usiamo al post di fetch
-import {ACCOUNT_ID, HEADER, TOKEN} from './config';
+import {ACCOUNT_ID, HEADER, TOKEN} from './config.js';
 
 function getMoviesPlaying(){
     return axios.get('https://api.themoviedb.org/3/movie/now_playing?language=it-IT',HEADER) //importiamo il link
