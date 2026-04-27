@@ -59,17 +59,7 @@ const HomePage = () => {
     return <>
         {/* HERO SECTION */}
         <div className="hero-cinema d-flex flex-column align-items-center justify-content-center text-center mb-4">
-            <div className="film-border px-4 py-3 mb-3 animate__animated animate__fadeInDown">
-                <h1 className="display-3 mb-2">AlloCiné</h1>
-                <h2 className="hero-tagline mb-3">Dove il Cinema prende vita</h2>
-                <div className="hero-icons mb-2">
-                    <FaFilm size={36} color="#e6c200" className="mx-2" />
-                    <FaTicketAlt size={36} color="#a71d31" className="mx-2" />
-                </div>
-                <Button variant="primary" className="hero-trailer-btn mt-2" onClick={() => setShowTrailer(true)}>
-                    Guarda il trailer
-                </Button>
-            </div>
+            <h1 className="display-4 mb-3">Bienvenue au Cinéma</h1>
             <div className="hero-marquee w-100">
                 <marquee behavior="scroll" direction="left" scrollamount="7">
                     🍿 Novità: Scopri i film più attesi e le stelle del cinema! 🍿
@@ -86,7 +76,7 @@ const HomePage = () => {
                 {/* Placeholder video, puoi sostituire con un vero trailer */}
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/6NUZK8G_mgE" title="Trailer" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
             </Modal.Body>
-        </Modal>
+        </Modal> 
 
         <Container fluid className="d-flex flex-column align-items-center pt-3">
             {/* CAROUSEL FILM */}
