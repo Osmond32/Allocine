@@ -6,7 +6,7 @@ const MoviesCarousel = ({title, movies}) => {
     const navigate = useNavigate();
     return <>
      <h2>{title}</h2>
-            <Carousel className="col-6 fade-in">
+            <Carousel className="w-100 fade-in" style={{ maxWidth: '800px', margin: '0 auto' }}>
                 {movies.map((movies) => {
                     return <Carousel.Item key={movies.id} className="position-relative">
                         <span className="cinema-icon"><FaFilm /></span>

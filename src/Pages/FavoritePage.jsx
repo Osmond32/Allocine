@@ -27,7 +27,7 @@ const FavoritePage = () => {
     
     return <>
     <Container className="d-flex flex-column align-items-center gap-3">
-        <div className="d-flex flex-wrap gap-3 justufy-content-center">
+        <div className="d-flex flex-wrap gap-3 justify-content-center">
             {movies.map((movie) =>{
                 return <MovieCard key={movie.id} movie={movie}/>
             })}

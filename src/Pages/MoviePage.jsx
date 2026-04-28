@@ -131,8 +131,8 @@ const MoviePage = () => {
         checkWatchList();
     }, [])
     return <>
-        <Container fluid className="d-flex flex-column align-items-center gap-3 col-6">
-            <Container className="d-flex">
+        <Container fluid className="d-flex flex-column align-items-center gap-3 col-12 col-md-10 col-lg-8 pt-4">
+            <Container className="d-flex flex-column flex-md-row">
 
                 <Container className="d-flex flex-column align-items-center gap-3">
                     <img className="col-12" src={"https://image.tmdb.org/t/p/original" + movie.poster_path} alt={"IMAGE-" + movie.title}></img>
