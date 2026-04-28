@@ -77,7 +77,7 @@ const HomePage = () => {
             {/* CAROUSEL FILM */}
             <MoviesCarousel title={"Film à l'affiche"} movies={movies} />
             <MoviesCarousel title={"Film à venir"} movies={moviesUpComing} />
-            <MoviesCarousel title={"Film les mieux notés"} movies={moviesTopRated} />
+      
         </Container>
     </>;
 }
