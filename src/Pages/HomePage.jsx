@@ -54,7 +54,7 @@ const HomePage = () => {
                         alt={movie.title}
                         style={{ height: '60vh', objectFit: 'cover', objectPosition: 'top' }}
                     />
-                    <Carousel.Caption className="bg-dark bg-opacity-75 rounded p-3 d-none d-md-block">
+                            <Carousel.Caption className="bg-dark bg-opacity-75 text-white rounded p-3 d-none d-md-block">
                         <h3>{movie.title}</h3>
                         <p>{movie.overview}</p>
                     </Carousel.Caption>

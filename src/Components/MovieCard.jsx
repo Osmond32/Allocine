@@ -6,12 +6,12 @@ const MovieCard = ({movie}) => {
     const navigate = useNavigate();
 
     return <>
-        <Card className="fade-in film-border-card position-relative" style={{ width: '16rem', maxWidth: '100%' }} onClick={() => (navigate("/movie/"+movie.id))}>
+        <Card className="fade-in film-border-card position-relative bg-dark text-white" style={{ width: '16rem', maxWidth: '100%' }} onClick={() => (navigate("/movie/"+movie.id))}>
             <span className="cinema-icon"><FaFilm /></span>
             <Card.Img variant="top" src={"https://image.tmdb.org/t/p/original" + movie.poster_path} />
             <Card.Body style={{maxHeight: "250px"}}>
                 <Card.Title className="text-truncate">{movie.title}</Card.Title>
-                <Card.Text style={{height: "40%", overflowY: "auto"}}>
+                <Card.Text className="text-light" style={{height: "40%", overflowY: "auto"}}>
                     {movie.overview}
                 </Card.Text>
                 <div className="d-flex flex-column align-items-center">

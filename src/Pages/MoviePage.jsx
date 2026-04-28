@@ -148,8 +148,8 @@ const MoviePage = () => {
                         <button className="btn btn-success" onClick={addToWatchList}>Ajouter a la watch list </button> }
                        </div>
 
-                    <h2 className="tect-decoration-underline">Description</h2>
-                    <p style={{ maxHeight: "30vh", overflow: "auto", textAlign: "justify", paddingRight: "15px" }}>
+                    <h2 className="text-decoration-underline">Description</h2>
+                    <p className="bg-dark text-light p-3 rounded w-100" style={{ maxHeight: "30vh", overflow: "auto", textAlign: "justify" }}>
                         {movie.overview ? movie.overview : "Non reseigné"}
 
                     </p>
