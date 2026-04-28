@@ -1,23 +1,16 @@
-import { Carousel } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import { FaFilm } from 'react-icons/fa';
+import MovieCard from "./MovieCard";
 
-const MoviesCarousel = ({title, movies}) => {
-    const navigate = useNavigate();
+const MoviesCarousel = ({ title, movies }) => {
     return <>
-     <h2>{title}</h2>
-            <Carousel className="w-100 fade-in" style={{ maxWidth: '800px', margin: '0 auto' }}>
-                {movies.map((movies) => {
-                    return <Carousel.Item key={movies.id} className="position-relative">
-                        <span className="cinema-icon"><FaFilm /></span>
-                        <img onClick={()=> navigate('/movie/' +movies.id)} className="block w-100 rounded cursor" src={"https://image.tmdb.org/t/p/original" + movies.backdrop_path}></img>
-                        <Carousel.Caption>
-                            <h2>{movies.title}</h2>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                })}
-
-            </Carousel>
+        <h2 className="mb-3 w-100 text-start">{title}</h2>
+        {/* Contenitore a scorrimento orizzontale */}
+        <div className="d-flex overflow-auto gap-3 pb-4 w-100" style={{ scrollBehavior: 'smooth' }}>
+            {movies.map((movie) => (
+                <div key={movie.id} className="flex-shrink-0">
+                    <MovieCard movie={movie} />
+                </div>
+            ))}
+        </div>
     </>;
 }
 
