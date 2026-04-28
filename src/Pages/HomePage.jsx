@@ -73,7 +73,7 @@ const HomePage = () => {
             </Modal.Body>
         </Modal> 
 
-        <Container fluid className="d-flex flex-column align-items-center pt-3 gap-4 mb-5">
+        <Container fluid className="d-flex flex-column pt-3 gap-4 mb-5 px-2 px-md-5 overflow-hidden">
             {/* CAROUSEL FILM */}
             <MoviesCarousel title={"Film à l'affiche"} movies={movies} />
             <MoviesCarousel title={"Film à venir"} movies={moviesUpComing} />
